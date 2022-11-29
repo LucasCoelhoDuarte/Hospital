@@ -1,0 +1,56 @@
+{
+  "medicos": [
+    {
+      "id": 1,
+      "nome": "João da Silva",
+      "especialidade": "Cardiologia",
+      "cpf": "647.210.130-27",
+      "estado_civil": "Casado",
+      "nascimento": "1988-04-03"
+    },
+    {
+      "id": 3,
+      "nome": "Cleiton Fernandes",
+      "especialidade": "Oftamologista",
+      "cpf": "552.482.430-91",
+      "estado_civil": "casado",
+      "nascimento": "1989-06-06"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "nome": "Ana Marcolino",
+      "cpf": "264.594.230-08",
+      "nascimento": "1997-07-20",
+      "medico_responsavel": "CLEITON FERNANDES (CPF: 552.482.430-91)",
+      "doenca": "ALERGIA"
+    },
+    {
+      "id": 2,
+      "nome": "Paulo Freire",
+      "cpf": "886.177.730-90",
+      "nascimento": "1990-01-10",
+      "medico_responsavel": "JOÃO DA SILVA (CPF: 647.210.130-27)",
+      "doenca": "CÂNCER"
+    }
+  ],
+  "doencas": [
+    {
+      "id": 1,
+      "doenca": "Alergia",
+      "area_afetada": "pele",
+      "tratamento": "Anti-histamínicos",
+      "nivel_perigo": 3,
+      "descricao": "Indicado para o paciente ficar longe de gatos."
+    },
+    {
+      "id": 2,
+      "doenca": "Câncer",
+      "area_afetada": "estômago",
+      "tratamento": "químioterapia",
+      "nivel_perigo": 10,
+      "descricao": "Paciente deve ficar de repouso."
+    }
+  ]
+}

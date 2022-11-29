@@ -1,0 +1,41 @@
+<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" [routerLink]="['listagem-medicos']">Médico</a>
+                    <ul class="bg-secondary">
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['listagem-medicos']">Listagem de Médicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['cadastro-medico']">Cadastro de Médico</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['listagem-pacientes']">Paciente</a>
+                    <ul class="bg-secondary">
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['listagem-pacientes']">Listagem de Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['cadastro-paciente']">Cadastro de Paciente</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="['listagem-doencas']">Doença</a>
+                    <ul class="bg-secondary">
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['listagem-doencas']">Listagem de Doenças</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['cadastro-doenca']">Cadastro de Doenças</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

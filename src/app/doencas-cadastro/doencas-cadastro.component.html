@@ -1,0 +1,29 @@
+<div class="bg-light rounded-4 p-5 mx-auto mt-5 w-50">
+<h1 class="text-center mb-5">Cadastro de Doenças</h1>
+<form [formGroup]="doencaForm" (ngSubmit)="onSubmit()" class="col-8 offset-2">
+  <div class="mb-3">
+    <label for="doenca">Doença: </label>
+    <input class="form-control" id="doenca" type="text" formControlName="doenca" />
+  </div>
+  <div class="mb-3">
+    <label for="area_afetada">Área afetada: </label>
+    <input class="form-control" id="area_afetada" type="text" formControlName="area_afetada" />
+  </div>
+  <div class="mb-3">
+    <label for="tratamento">Tratamento: </label>
+    <input class="form-control" id="tratamento" type="text" formControlName="tratamento" />
+  </div>
+  <div class="mb-3">
+    <label for="nivel_perigo">Nível de perigo: </label>
+    <input class="form-control" id="nivel_perigo" type="number" formControlName="nivel_perigo" />
+  </div>
+  <div class="mb-3">
+    <label for="descricao">Descrição (Opcional): </label>
+    <textarea class="form-control" id="descricao" formControlName="descricao" rows="3"></textarea>
+  </div>
+  <div class="mt-5 text-center">
+      <button type="submit" [disabled]="!doencaForm.valid" class="btn btn-success">Cadastrar</button>
+      <button (click)="redirect()" class="btn btn-secondary ms-1">Cancelar</button>
+  </div>
+</form>
+</div>

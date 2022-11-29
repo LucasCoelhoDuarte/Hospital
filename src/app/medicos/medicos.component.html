@@ -1,0 +1,18 @@
+<h1 class="mt-3 text-white">Médicos</h1>
+<br>
+<ul class="list-group">
+    <li *ngFor="let medico of medicos" class="list-group-item bg-secondary">
+        <p class="text-light">
+            {{medico.nome | uppercase}} (<strong>CPF: </strong>{{medico.cpf}})
+        </p>
+        <p class="text-white">
+            <strong>Especialidade: </strong>{{medico.especialidade | uppercase}}<br>
+            <strong>Estado Civil: </strong>{{medico.estado_civil | uppercase}}<br>
+            <strong>Data de nascimento: </strong>{{ medico.nascimento | date:'dd/MM/YYYY'}}
+        </p>
+        <p>
+            <button class="btn btn-warning" [routerLink]="['/edicao-medico', medico.id]">Editar</button>
+            <button class="btn btn-danger ms-1" (click)="remove(medico)">Excluir</button>
+        </p>
+    </li>
+</ul>

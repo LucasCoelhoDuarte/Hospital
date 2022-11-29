@@ -1,0 +1,21 @@
+<h1 class="mt-3 text-white">Doenças</h1>
+<br>
+<ul class="list-group">
+    <li *ngFor="let doenca of doencas" class="list-group-item bg-secondary">
+        <p class="text-light">
+            {{doenca.doenca | uppercase}}
+        </p>
+        <p class="text-white">
+            <strong>Área afetada: </strong>{{doenca.area_afetada | uppercase}}<br>
+            <strong>Tratamento: </strong>{{doenca.tratamento | uppercase}}<br>
+            <strong>Nível de perigo: </strong>{{doenca.nivel_perigo}}
+            <span *ngIf="doenca.descricao">
+                <br><strong>Descrição: </strong>{{doenca.descricao}}
+            </span>
+        </p>
+        <p>
+            <button class="btn btn-warning" [routerLink]="['/edicao-doenca', doenca.id]">Editar</button>
+            <button class="btn btn-danger ms-1" (click)="remove(doenca)">Excluir</button>
+        </p>
+    </li>
+</ul>

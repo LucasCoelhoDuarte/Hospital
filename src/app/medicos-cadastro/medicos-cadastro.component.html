@@ -1,0 +1,29 @@
+<div class="bg-light rounded-4 p-5 mx-auto mt-5 w-50">
+<h1 class="text-center mb-5">Cadastro de Médicos</h1>
+<form [formGroup]="medicoForm" (ngSubmit)="onSubmit()" class="col-8 offset-2">
+  <div class="mb-3">
+    <label for="nome">Nome: </label>
+    <input class="form-control" id="nome" type="text" formControlName="nome" />
+  </div>
+  <div class="mb-3">
+    <label for="especialidade">Especialidade: </label>
+    <input class="form-control" id="especialidade" type="text" formControlName="especialidade" />
+  </div>
+  <div class="mb-3">
+    <label for="cpf">CPF: </label>
+    <input class="form-control" id="cpf" type="text" formControlName="cpf" />
+  </div>
+  <div class="mb-3">
+    <label for="estado_civil">Estado Civil: </label>
+    <input class="form-control" id="estado_civil" type="text" formControlName="estado_civil" />
+  </div>
+  <div class="mb-3">
+    <label for="nascimento">Data de nascimento: </label>
+    <input class="form-control" id="nascimento" type="date" formControlName="nascimento" />
+  </div>
+  <div class="mt-5 text-center">
+      <button type="submit" [disabled]="!medicoForm.valid" class="btn btn-success">Cadastrar</button>
+      <button (click)="redirect()" class="btn btn-secondary ms-1">Cancelar</button>
+  </div>
+</form>
+</div>

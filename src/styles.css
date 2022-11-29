@@ -1,0 +1,25 @@
+
+.navbar-nav li{
+    position:relative;
+}
+
+
+.navbar-nav li  ul{
+    position:absolute;
+    top:39px;
+    left:0;
+    background-color:#fff;
+    display:none;
+    padding: 0;
+}
+.navbar-nav li:hover ul, .navbar-nav li.over ul{display:block;}
+
+.navbar-nav li ul li{
+    display:block;
+    width:180px;
+}
+
+body{
+    background-color: #007bff;
+}
+    

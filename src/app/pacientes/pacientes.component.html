@@ -1,0 +1,18 @@
+<h1 class="mt-3 text-white">Pacientes</h1>
+<br>
+<ul class="list-group">
+    <li *ngFor="let paciente of pacientes" class="list-group-item bg-secondary">
+        <p class="text-light">
+            {{paciente.nome | uppercase}} (<strong>CPF: </strong>{{paciente.cpf}})
+        </p>
+        <p class="text-white">
+            <strong>Data de nascimento: </strong>{{ paciente.nascimento | date:'dd/MM/YYYY'}}<br>
+            <strong>Médico responsável: </strong>{{paciente.medico_responsavel | uppercase}}<br>
+            <strong>Doença: </strong>{{paciente.doenca | uppercase}}
+        </p>
+        <p>
+            <button class="btn btn-warning" [routerLink]="['/edicao-paciente', paciente.id]">Editar</button>
+            <button class="btn btn-danger ms-1" (click)="remove(paciente)">Excluir</button>
+        </p>
+    </li>
+</ul>
